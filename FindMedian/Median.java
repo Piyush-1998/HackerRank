@@ -3,7 +3,6 @@ import java.util.*;
 
 public class Median {
 
-    // Complete the findMedian function below.
     static int findMedian(int[] arr) {
         
         Arrays.sort(arr);
