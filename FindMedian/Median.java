@@ -32,6 +32,6 @@ public class Median {
 
         System.out.println(String.valueOf(result));
 
-        //scanner.close();
+        scanner.close();
     }
 }
