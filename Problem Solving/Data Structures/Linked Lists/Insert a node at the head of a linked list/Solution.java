@@ -1,14 +1,14 @@
-    /*
-     * SinglyLinkedListNode {
-     *     int data;
-     *     SinglyLinkedListNode next;
-     * }
-     */
+/*
+* SinglyLinkedListNode {
+*     int data;
+*     SinglyLinkedListNode next;
+* }
+*/
 
-	 static SinglyLinkedListNode insertNodeAtHead(SinglyLinkedListNode llist, int data) {
+static SinglyLinkedListNode insertNodeAtHead(SinglyLinkedListNode llist, int data) {
 
-        SinglyLinkedListNode head = new SinglyLinkedListNode(data);
-        head.next = llist;
-        
-        return head;
-    }
+	SinglyLinkedListNode head = new SinglyLinkedListNode(data);
+	head.next = llist;
+
+	return head;
+}

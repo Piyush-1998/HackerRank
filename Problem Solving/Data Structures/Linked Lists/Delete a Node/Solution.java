@@ -5,7 +5,7 @@
      * }
      */
 
-	 static SinglyLinkedListNode deleteNode(SinglyLinkedListNode head, int position) {
+     static SinglyLinkedListNode deleteNode(SinglyLinkedListNode head, int position) {
 
         SinglyLinkedListNode temp = head;
         
