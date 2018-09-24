@@ -13,17 +13,17 @@ class Bird extends Animal
 	{
 		System.out.println("I am flying");
 	}
-    
-    void sing()
-    {
-        System.out.println("I am singing");
-    }
-    
-    public static void main(String[] args){
 
-      Bird bird = new Bird();
-      bird.walk();
-      bird.fly();
-      bird.sing();
-   }
+	void sing()
+	{
+		System.out.println("I am singing");
+	}
+
+	public static void main(String[] args){
+
+		Bird bird = new Bird();
+		bird.walk();
+		bird.fly();
+		bird.sing();
+	}
 }
