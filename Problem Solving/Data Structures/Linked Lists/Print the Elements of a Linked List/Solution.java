@@ -1,16 +1,16 @@
-    /*
-     * SinglyLinkedListNode {
-     *     int data;
-     *     SinglyLinkedListNode next;
-     * }
-     */
+/*
+ * SinglyLinkedListNode {
+ *     int data;
+ *     SinglyLinkedListNode next;
+ * }
+ */
 
-    static void printLinkedList(SinglyLinkedListNode head) {
-        
-        while(head != null) {
-            
-            System.out.println(head.data);
-            
-            head = head.next;
-        }
+static void printLinkedList(SinglyLinkedListNode head) {
+
+    while(head != null) {
+
+        System.out.println(head.data);
+
+        head = head.next;
     }
+}
