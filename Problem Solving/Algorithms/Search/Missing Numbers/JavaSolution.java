@@ -8,6 +8,7 @@ import java.util.Set;
 
 public class Solution {
 
+	// using sorting
 	public static Set<Integer> missingNumbers(int[] arr1, int arr2[]) {
 
 		Set<Integer> result = new HashSet<Integer>();
