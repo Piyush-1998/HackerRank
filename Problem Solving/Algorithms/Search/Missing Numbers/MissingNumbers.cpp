@@ -5,6 +5,7 @@
 
 using namespace std;
 
+// using map
 vector <int> missingNumbers(vector <int> arr, vector <int> brr) {
 
 	vector<int> missingNumbers;
