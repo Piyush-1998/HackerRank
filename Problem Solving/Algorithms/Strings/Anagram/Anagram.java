@@ -3,67 +3,64 @@ import java.util.*;
 
 public class Anagram {
 
-    static int anagram(String s) {
+	static int anagram(String s) {
 
-        HashMap<Character, Integer> countLetters = new HashMap<Character, Integer>();
-        
-        if(s.length() % 2 != 0) {
-            
-            return -1;
-        }
-        
-        for(int i = 0; i < s.length() / 2; i++) {
-            
-            if(countLetters.containsKey(s.charAt(i))) {
-                
-                countLetters.put(s.charAt(i), countLetters.get(s.charAt(i)) + 1);
-            }
-            
-            else {
+		// check base case
+		if (s.length() % 2 != 0) {
 
-                countLetters.put(s.charAt(i), 1);
-            }
-        }
-        
-        for(int i = s.length() / 2; i < s.length(); i++) {
+			return -1;
+		}
 
-            if(countLetters.containsKey(s.charAt(i))) {
-                
-                countLetters.put(s.charAt(i), countLetters.get(s.charAt(i)) - 1);
-            }
-            
-            else {
-                
-                countLetters.put(s.charAt(i), -1);
-            }
-        }
-        
-        int deletions = 0;
-        for(int val : countLetters.values()) {
-            
-            deletions+=Math.abs(val);
-        }
-        
-        return deletions / 2;
-    }
+		int[] letters = new int[26];
 
-    private static final Scanner scanner = new Scanner(System.in);
+		String first = s.substring(0, s.length() / 2);
+		String second = s.substring(s.length() / 2, s.length());
 
-    public static void main(String[] args) throws IOException {
+		for (char ch : first.toCharArray()) {
 
-        int q = scanner.nextInt();
+			if (ch >= 'a' && ch <= 'z') {
 
-        scanner.nextLine();
+				letters[ch - 'a']++;
+			}
+		}
 
-        for (int qItr = 0; qItr < q; qItr++) {
-            
-        	String s = scanner.nextLine();
+		for (char ch : second.toCharArray()) {
 
-            int result = anagram(s);
+			if (ch >= 'a' && ch <= 'z') {
 
-            System.out.println(result);
-        }
+				letters[ch - 'a']--;
+			}
+		}
 
-        scanner.close();
-    }
+		int count = 0;
+		for (int i : letters) {
+
+			if (i != 0) {
+
+				count += Math.abs(i);
+			}
+		}
+
+		return count / 2;
+	}
+
+	private static final Scanner scanner = new Scanner(System.in);
+
+	public static void main(String[] args) throws IOException {
+
+		int q = scanner.nextInt();
+
+		scanner.nextLine();
+
+		for (int qItr = 0; qItr < q; qItr++) {
+
+			String s = scanner.nextLine();
+
+			int result = anagram(s);
+
+			System.out.println(result);
+		}
+
+		scanner.close();
+	}
 }
