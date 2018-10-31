@@ -3,38 +3,38 @@ import java.util.*;
 
 public class LonelyInteger {
 
-    public static int lonelyinteger(int [] array) {
-        
-        int val = 0;     
-        for (int num : array) {
-            
-            val = val ^ num; 
-        }
-        return val;
-    }
+	public static int lonelyinteger(int[] array) {
 
-    private static final Scanner scanner = new Scanner(System.in);
+		int val = 0;
+		for (int num : array) {
 
-    public static void main(String[] args) throws IOException {
+			val = val ^ num;
+		}
+		return val;
+	}
 
-        int n = scanner.nextInt();
+	private static final Scanner scanner = new Scanner(System.in);
 
-        scanner.nextLine();
-        
-        int[] a = new int[n];
+	public static void main(String[] args) throws IOException {
 
-        String[] aItems = scanner.nextLine().split(" ");
+		int n = scanner.nextInt();
 
-        scanner.close();
+		scanner.nextLine();
 
-        for (int i = 0; i < n; i++) {
-            
-        	int aItem = Integer.parseInt(aItems[i]);
-            a[i] = aItem;
-        }
+		int[] a = new int[n];
 
-        int result = lonelyinteger(a);
+		String[] aItems = scanner.nextLine().split(" ");
 
-        System.out.println(String.valueOf(result));
-    }
+		scanner.close();
+
+		for (int i = 0; i < n; i++) {
+
+			int aItem = Integer.parseInt(aItems[i]);
+			a[i] = aItem;
+		}
+
+		int result = lonelyinteger(a);
+
+		System.out.println(String.valueOf(result));
+	}
 }
