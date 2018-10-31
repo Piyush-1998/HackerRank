@@ -3,39 +3,39 @@ import java.util.*;
 
 public class Partition {
 
-    static LinkedList<Integer> partition(int[] arr) {
-        
-        int pivot = arr[0];
-        
-        LinkedList<Integer> left = new LinkedList<>();
-        LinkedList<Integer> right = new LinkedList<>();
-        
-        for(int i = 1; i < arr.length; i++) {
-            
-            if(arr[i] > pivot) {
-                
-                right.add(arr[i]);
-            }
-            
-            else {
-                
-                left.add(arr[i]);
-            }
-        }
-        
-        left.add(pivot);
-        
-        for(int i = 0; i < right.size(); i++) {
-            
-            left.add(right.get(i));
-        }
-        
-        return left;
-    }
+	static LinkedList<Integer> partition(int[] arr) {
 
-    private static final Scanner scanner = new Scanner(System.in);
+		int pivot = arr[0];
 
-    public static void main(String[] args) throws IOException {
+		LinkedList<Integer> left = new LinkedList<>();
+		LinkedList<Integer> right = new LinkedList<>();
+
+		for (int i = 1; i < arr.length; i++) {
+
+			if (arr[i] > pivot) {
+
+				right.add(arr[i]);
+			}
+
+			else {
+
+				left.add(arr[i]);
+			}
+		}
+
+		left.add(pivot);
+
+		for (int i = 0; i < right.size(); i++) {
+
+			left.add(right.get(i));
+		}
+
+		return left;
+	}
+
+	private static final Scanner scanner = new Scanner(System.in);
+
+	public static void main(String[] args) throws IOException {
 
         int n = scanner.nextInt();
         scanner.nextLine();
@@ -63,4 +63,3 @@ public class Partition {
 
         scanner.close();
     }
-}
