@@ -3,40 +3,40 @@ import java.util.*;
 
 public class TwoStrings {
 
-    static String twoStrings(String s1, String s2) {
+	static String twoStrings(String s1, String s2) {
 
-        String letters = "abcdefghijlkmnopqrstuvwxyz";
-        
-        for(Character ch : letters.toCharArray()) {
-            
-            if(s1.contains(ch.toString()) && s2.contains(ch.toString())) {
-                
-                return "YES";
-            }
-        }
-        
-        return "NO";
-    }
+		String letters = "abcdefghijlkmnopqrstuvwxyz";
 
-    private static final Scanner scanner = new Scanner(System.in);
+		for (Character ch : letters.toCharArray()) {
 
-    public static void main(String[] args) throws IOException {
+			if (s1.contains(ch.toString()) && s2.contains(ch.toString())) {
 
-        int q = scanner.nextInt();
-        scanner.nextLine();
+				return "YES";
+			}
+		}
 
-        System.out.println();
-        for (int qItr = 0; qItr < q; qItr++) {
-            
-        	String s1 = scanner.nextLine();
+		return "NO";
+	}
 
-            String s2 = scanner.nextLine();
+	private static final Scanner scanner = new Scanner(System.in);
 
-            String result = twoStrings(s1, s2);
-            
-            System.out.println(result);
-        }
+	public static void main(String[] args) throws IOException {
 
-        scanner.close();
-    }
+		int q = scanner.nextInt();
+		scanner.nextLine();
+
+		System.out.println();
+		for (int qItr = 0; qItr < q; qItr++) {
+
+			String s1 = scanner.nextLine();
+
+			String s2 = scanner.nextLine();
+
+			String result = twoStrings(s1, s2);
+
+			System.out.println(result);
+		}
+
+		scanner.close();
+	}
 }
