@@ -2,50 +2,50 @@ import java.io.*;
 import java.util.*;
 
 public class BigSorting {
-    
+
 	// sort without converting to integer
-    static class Checker implements Comparator<String> {
-        
-        @Override
-        public int compare(String o1, String o2) {
-         
-            if(o1.length() == o2.length()) {
-                
-                return o1.compareTo(o2);
-            }
+	static class Checker implements Comparator<String> {
 
-            return o1.length() - o2.length();
-        }
-    }
-    
-    static String[] bigSorting(String[] unsorted) {
-          
-        Arrays.sort(unsorted, new Checker());
+		@Override
+		public int compare(String o1, String o2) {
 
-        return unsorted;     
-    }
+			if (o1.length() == o2.length()) {
 
-    private static final Scanner scanner = new Scanner(System.in);
+				return o1.compareTo(o2);
+			}
 
-    public static void main(String[] args) throws IOException {
+			return o1.length() - o2.length();
+		}
+	}
 
-        int n = scanner.nextInt();
-        scanner.nextLine();
+	static String[] bigSorting(String[] unsorted) {
 
-        String[] unsorted = new String[n];
+		Arrays.sort(unsorted, new Checker());
 
-        for (int i = 0; i < n; i++) {
+		return unsorted;
+	}
 
-            unsorted[i] = scanner.next();
-        }
-        
-        String[] result = bigSorting(unsorted);
+	private static final Scanner scanner = new Scanner(System.in);
 
-        for (int i = 0; i < result.length; i++) {
-            
-            System.out.println(result[i]);
-        }
+	public static void main(String[] args) throws IOException {
 
-        scanner.close();
-    }
+		int n = scanner.nextInt();
+		scanner.nextLine();
+
+		String[] unsorted = new String[n];
+
+		for (int i = 0; i < n; i++) {
+
+			unsorted[i] = scanner.next();
+		}
+
+		String[] result = bigSorting(unsorted);
+
+		for (int i = 0; i < result.length; i++) {
+
+			System.out.println(result[i]);
+		}
+
+		scanner.close();
+	}
 }
