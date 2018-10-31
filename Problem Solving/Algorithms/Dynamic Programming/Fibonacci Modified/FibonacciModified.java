@@ -4,7 +4,6 @@ import java.util.*;
 
 public class FibonacciModified {
     
-    // Complete the fibonacciModified function below.
     static BigInteger fibonacciModified(BigInteger t1, BigInteger t2, int n) {
         
         BigInteger[] arr = new BigInteger[n + 1];
