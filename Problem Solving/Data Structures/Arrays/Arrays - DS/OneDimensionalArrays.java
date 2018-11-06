@@ -46,7 +46,7 @@ public class OneDimensionalArrays{
 
         for (int i = 0; i < res.length; i++) {
         	
-        	System.out.print(res[i]);
+            System.out.print(res[i]);
 
             if (i != res.length - 1) {
 
@@ -57,5 +57,3 @@ public class OneDimensionalArrays{
         scanner.close();
     }
 }
-
-
