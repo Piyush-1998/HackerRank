@@ -10,16 +10,16 @@ class Node {
 
 public static void levelOrder(Node root) {
       
-        Queue<Node> queue = new LinkedList<Node>();
+    Queue<Node> queue = new LinkedList<Node>();
+    
+    queue.add(root);
+    
+    while(queue.size() > 0) {
         
-        queue.add(root);
+        Node current = queue.poll();
         
-        while(queue.size() > 0) {
-            
-            Node current = queue.poll();
-            
-            System.out.print(current.data + " ");
-        
+        System.out.print(current.data + " ");
+    
         if(current.left != null) {
             
             queue.add(current.left);
