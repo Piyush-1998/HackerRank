@@ -49,7 +49,7 @@ public class TwoDimensionalArray {
 
         for (int i = 0; i < 6; i++) {
             
-        	String[] arrRowItems = scanner.nextLine().split(" ");
+            String[] arrRowItems = scanner.nextLine().split(" ");
 
             for (int j = 0; j < 6; j++) {
                 int arrItem = Integer.parseInt(arrRowItems[j]);
