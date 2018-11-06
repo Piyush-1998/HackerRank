@@ -64,4 +64,3 @@ public class TwoDimensionalArray {
         scanner.close();
     }
 }
-
