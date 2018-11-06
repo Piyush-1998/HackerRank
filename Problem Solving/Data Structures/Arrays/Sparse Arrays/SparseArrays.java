@@ -3,63 +3,62 @@ import java.util.*;
 
 public class SparseArrays {
 
-    static int[] matchingStrings(String[] strings, String[] queries) {
-        
-        int[] foundStrings = new int[queries.length];
-        
-        for(int i = 0; i < queries.length; i++) {
-            
-            int currentTimes = 0;
-            for(int j = 0; j < strings.length; j++) {
-                
-                if(queries[i].equals(strings[j])) {
-                    
-                    currentTimes++;
-                }
-            }
-            foundStrings[i] = currentTimes;
-        }
-        
-        return foundStrings;
-    }
+	static int[] matchingStrings(String[] strings, String[] queries) {
 
-    private static final Scanner scanner = new Scanner(System.in);
+		int[] foundStrings = new int[queries.length];
 
-    public static void main(String[] args) throws IOException {
+		for (int i = 0; i < queries.length; i++) {
 
-        int stringsCount = scanner.nextInt();
-        scanner.nextLine();
+			int currentTimes = 0;
+			for (int j = 0; j < strings.length; j++) {
 
-        String[] strings = new String[stringsCount];
+				if (queries[i].equals(strings[j])) {
 
-        for (int i = 0; i < stringsCount; i++) {
-            String stringsItem = scanner.nextLine();
-            strings[i] = stringsItem;
-        }
+					currentTimes++;
+				}
+			}
+			foundStrings[i] = currentTimes;
+		}
 
-        int queriesCount = scanner.nextInt();
-        scanner.nextLine();
-        
-        String[] queries = new String[queriesCount];
+		return foundStrings;
+	}
 
-        for (int i = 0; i < queriesCount; i++) {
-            String queriesItem = scanner.nextLine();
-            queries[i] = queriesItem;
-        }
-        
-        scanner.close();
+	private static final Scanner scanner = new Scanner(System.in);
 
-        int[] res = matchingStrings(strings, queries);
+	public static void main(String[] args) throws IOException {
 
-        for (int i = 0; i < res.length; i++) {
-        	
-        	System.out.println(res[i]);
+		int stringsCount = scanner.nextInt();
+		scanner.nextLine();
 
-            if (i != res.length - 1) {
+		String[] strings = new String[stringsCount];
 
-            	System.out.println();
-            }
-        }
-    }
+		for (int i = 0; i < stringsCount; i++) {
+			String stringsItem = scanner.nextLine();
+			strings[i] = stringsItem;
+		}
+
+		int queriesCount = scanner.nextInt();
+		scanner.nextLine();
+
+		String[] queries = new String[queriesCount];
+
+		for (int i = 0; i < queriesCount; i++) {
+			String queriesItem = scanner.nextLine();
+			queries[i] = queriesItem;
+		}
+
+		scanner.close();
+
+		int[] res = matchingStrings(strings, queries);
+
+		for (int i = 0; i < res.length; i++) {
+
+			System.out.println(res[i]);
+
+			if (i != res.length - 1) {
+
+				System.out.println();
+			}
+		}
+	}
 }
-
